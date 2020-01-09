@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Wishlist;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -43,17 +44,22 @@ class User extends Authenticatable
     }
 
     //has many favorite categories
-    public function categories()
-    {
-        return $this->hasMany(Category::class);
-    }
-    public function brands()
-    {
-        return $this->hasMany(Brand::class);
-    }
+    // public function categories()
+    // {
+    //     return $this->hasMany(Category::class);
+    // }
+    // public function brands()
+    // {
+    //     return $this->hasMany(Brand::class);
+    // }
 
     public function reviews()
     {
         $this->hasMany(Review::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Wishlist::class);
     }
 }

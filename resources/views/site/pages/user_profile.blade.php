@@ -1,7 +1,7 @@
 @extends('site.app')
 @section('bsdf', 'b4')
 @section('content')
-@section('content')
+@include('admin.partials.flash')
 @include('site.partials.nav')
 <section class="section-pagetop bg-dark">
     <div class="container clearfix">

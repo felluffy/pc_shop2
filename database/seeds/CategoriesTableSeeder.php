@@ -28,6 +28,7 @@ class CategoriesTableSeeder extends Seeder
             'description'   =>  'Velit labore incididunt do nulla est sunt cillum.',
             'parent_id'     =>  1,
             'menu'          =>  1,
+
         ]);
         Category::create([
             'name'          =>  'Components',
@@ -53,6 +54,7 @@ class CategoriesTableSeeder extends Seeder
             'description'   =>  'Qui incididunt ea officia commodo culpa nisi culpa et.',
             'parent_id'     =>  2,
             'menu'          =>  0,
+            'featured'      =>  1,
         ]);
         Category::create([
             'name'          =>  'Brand PC',
@@ -77,6 +79,7 @@ class CategoriesTableSeeder extends Seeder
             'description'   =>  'Mollit proident veniam id ad fugiat aliqua.',
             'parent_id'     =>  3,
             'menu'          =>  0,
+            'featured'      =>  1,
         ]);
         Category::create([
             'name'          =>  'Gaming Notebooks',
@@ -89,6 +92,7 @@ class CategoriesTableSeeder extends Seeder
             'description'   =>  'Aute eu fugiat sit ut et dolor minim quis esse amet elit aute nisi.',
             'parent_id'     =>  4,
             'menu'          =>  0,
+            'featured'      =>  1,
         ]);
         Category::create([
             'name'          =>  'CPU',

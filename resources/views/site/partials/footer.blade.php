@@ -60,7 +60,7 @@
             <div class="col-sm-6">
                 <p class="text-md-right text-white-50">
                     <br>
-                <a href="{{route('admin.dashboard')}}"" class="text-white-50">Admin</a>
+                <a href="{{route('admin.dashboard')}}"" class="text-white-50"><strong>Admin</strong></a>
                 </p>
             </div>
         </section>
