@@ -25,7 +25,8 @@
             @forelse ($categories->take(3) as $category)
             <div class="col-md-4">
                 <div class="card-banner">
-                    <div class="img-wrap padding-x"><img src="https://via.placeholder.com/176" alt="https://via.placeholder.com/176"></div>
+                
+                    <div class="img-wrap padding-x"><img src="{{ asset($category->image)}}" alt=""></div>
                     <article class="overlay overlay-cover d-flex align-items-center justify-content-center">
                         <div class="text-center">
                             <h5 class="card-title">{{$category->name}}</h5>
@@ -39,8 +40,6 @@
             <p>It's empty here</p>
             @endforelse
         </div>
-        Sunt eiusmod laborum ut dolor laboris pariatur nisi nulla id proident dolor officia.
-
 
         <header class="section-heading heading-line">
             <h4 class="title-section bg">Featured Products</h4>
@@ -50,7 +49,11 @@
             @forelse ($products->take(6) as $product)
             <div class="col-md-4">
                 <figure class="card card-product">
-                    <div class="img-wrap padding-y"><img src="https://via.placeholder.com/176" alt=""></div>
+                    @if ($product->images->count() > 0)
+                        <div class="img-wrap padding-y"><img src="{{ asset($product->images->first()->full) }}" alt=""></div>
+                    @else
+                        <div class="img-wrap padding-y"><img src="https://via.placeholder.com/176" alt=""></div>
+                    @endif
                     <figcaption class="info-wrap">
                         <h4 class="title"><a href="{{ route('product.show', $product->name) }}">{{ $product->name }}</a>
                         </h4>
